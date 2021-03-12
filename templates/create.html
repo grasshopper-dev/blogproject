@@ -5,8 +5,11 @@
 
 
 {% block content %}
+<h1>新規作成入力</h1>
+<p></p>
 <form action="" method="POST">{% csrf_token %}
     {{form.as_p}}
-    <input type="submit" value="作成する">
+    <a href="{% url 'list' %}" class="btn btn-primary">一覧へ</a>
+    <input type="submit" class="btn btn-primary" value="作成する">
 </form>
 {% endblock content %}
